@@ -1,0 +1,76 @@
+<LinearLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         xmlns:android="http://schemas.android.com/apk/res/android"
+         android:orientation="horizontal">
+     <EditText
+         android:layout_width="260dp"
+         android:layout_height="match_parent"
+         android:hint="Search Any Location"
+         android:id="@+id/search" />
+
+         <Button
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+
+             android:id="@+id/b3"
+             android:text="Search"
+             android:onClick="onSearch"
+             />
+     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:id="@+id/b1"
+            android:text="Map type"
+            android:onClick="changeType"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+    <Button
+        android:text="+"
+        android:layout_width="203dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bzoomin"
+        android:onClick="onZoom"
+        />
+
+    <Button
+        android:text="-"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bzoomout"
+        android:onClick="onZoom"
+        />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="368dp"
+        tools:context="com.example.jatin.handymandy.MapsActivity" />
+
+
+</LinearLayout>
